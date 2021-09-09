@@ -6,7 +6,7 @@ Indeed this seems intentional, as many of us would almost certainly not purchase
 The only related information that is easy to find is when a course was last updated. That can be incredibly misleading though
 because even the most minor of changes to a course will reflect a recent update date and gives the impression that the course
 overall contains up-to-date material.
-I'm aware of how quickly things change in this industry and because of that I do sympathize with those Udemy instructors have spent weeks or months 
+I'm aware of how quickly things change in this industry and because of that I do sympathize with those Udemy instructors that spent weeks or months 
 contructing a quality course, only to have certain parts of their code base break within a year because of updates to some particular languages, tools, 
 dependencies, etc that they might be using.
 With that said, I think we as the consumers deserve as much transparency as possible when deciding where to spend our time and money.
