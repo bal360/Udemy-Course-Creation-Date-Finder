@@ -35,5 +35,10 @@ module.exports = {
       // throw new Error(chalk.bold.red('Verify url and try again'))
       console.log(err)
     }
-  }
+  },
+  // splitURLForAlreadyPurchasedCourse(courseURL) {
+  //   try {
+
+  //   }
+  // }
 }
