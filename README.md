@@ -1,6 +1,5 @@
 
 
-https://user-images.githubusercontent.com/46230902/132778610-3a895f0e-c062-4b6b-9637-aa29c6792baf.mp4
 
 # Udemy-Course-Creation-Date-Finder
 
@@ -23,6 +22,6 @@ I am JUST getting this deployed and still have some refactoring and updates to c
 
 Please watch this short video to learn the current steps you need to know to use this app:
 
-[Instructional Video]
+[Instructional Video](https://user-images.githubusercontent.com/46230902/132778610-3a895f0e-c062-4b6b-9637-aa29c6792baf.mp4)
 
 [Use the app here!](https://obscure-bayou-33734.herokuapp.com/)
