@@ -1,4 +1,4 @@
-module.exports = ({ created }) => {
+module.exports = ({created}) => {
   return `
     <!DOCTYPE html>
     <html lang="en">

@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000
 http.createServer(async (req, res) => {
   
   let body = ''
+  let created =  ''
   if (req.method === 'POST') {
 
     req.on('data', function (chunk) {
@@ -20,17 +21,17 @@ http.createServer(async (req, res) => {
       const courseURL = parsedReq.courseURL
       
       if (!courseURL.trim().length > 0 || !courseURL.trim().includes('/course/')) {
-        res.end(layout({created: ''}))
+        res.end(layout({created}))
       } else {
         const courseId = await getCourseId(courseURL)
         const creationDate = await getCourseCreationDate(courseId)
-        const date = new Date(creationDate).toDateString()
+        created = new Date(creationDate).toDateString()
         
         res.writeHead(200);
-        res.end(layout({created: date}));
+        res.end(layout({created}));
       }
     })
   } else {
-    res.end(layout({created: ''}))
+    res.end(layout({created}))
   }
 }).listen(port)
