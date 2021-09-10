@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 module.exports = {
   async getCourseCreationDate(id) {
     try {
-      const { data } = await axios.get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=title,url,created`)
+      const { data } = await axios.get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=created`)
       return data.created
     } catch (err) {
       console.log(err)
