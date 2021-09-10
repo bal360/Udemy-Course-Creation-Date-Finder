@@ -5,7 +5,7 @@ module.exports = {
   async getCourseCreationDate(id) {
     try {
       const { data } = await axios.get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=title,url,created`)
-      return data
+      return data.created
     } catch (err) {
       console.log(err)
     }

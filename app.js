@@ -23,8 +23,8 @@ http.createServer(async (req, res) => {
         res.end(layout({created: ''}))
       } else {
         const courseId = await getCourseId(courseURL)
-        const course = await getCourseCreationDate(courseId)
-        const date = new Date(course.created).toDateString()
+        const creationDate = await getCourseCreationDate(courseId)
+        const date = new Date(creationDate).toDateString()
         
         res.writeHead(200);
         res.end(layout({created: date}));
