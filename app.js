@@ -12,22 +12,19 @@ http.createServer(async (req, res) => {
   if (req.method === 'POST') {
 
     req.on('data', function (chunk) {
-      console.log('Chunk', chunk)
       body += chunk;
     })
 
     req.on('end', async () => {
       const parsedReq = parse(body)
-      console.log('Parsed Request:', parsedReq)
       const courseURL = parsedReq.courseURL
       
-      if (!courseURL.trim().length > 0) {
+      if (!courseURL.trim().length > 0 || !courseURL.trim().includes('/course/')) {
         res.end(layout({created: ''}))
       } else {
         const courseId = await getCourseId(courseURL)
         const course = await getCourseCreationDate(courseId)
         const date = new Date(course.created).toDateString()
-        console.log('Date:', date)
         
         res.writeHead(200);
         res.end(layout({created: date}));
