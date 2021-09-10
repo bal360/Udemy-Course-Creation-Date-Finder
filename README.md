@@ -9,4 +9,4 @@ Please watch this short video to learn the current steps you need to know to use
 
 [Instructional Video](https://user-images.githubusercontent.com/46230902/132792037-d1cf1650-feea-42c3-aa6d-0feb3c95a876.mp4)
 
-Now go and use the app [here!](https://obscure-bayou-33734.herokuapp.com/)
+## Now go and use the app [here!](https://obscure-bayou-33734.herokuapp.com/)
