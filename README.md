@@ -13,4 +13,12 @@ With that said, I think we as the consumers deserve as much transparency as poss
 To ensure we are all making the most informed decision possible when buying a new Udemy course, I decided to whip up a little application that
 can quickly tell you when a particular course was first created, not when it was last updated.
 
-Deployment and Steps to use coming soon...
+
+
+I am JUST getting this deployed and still have some refactoring and updates to clean up this ugly code and get some input validations set up, but for now this does work!
+
+Please watch this short video to learn the current steps you need to know to use this app:
+
+[Instructional Video]
+
+[Use the app here!](https://obscure-bayou-33734.herokuapp.com/)
