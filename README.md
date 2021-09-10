@@ -1,4 +1,4 @@
-# Udemy-Course-Creation-Date-Finder
+# Udemy Course Creation Date Finder
 
 To ensure we are all making the most informed decision possible when buying a new Udemy course, I decided to whip up a little application that
 can quickly tell you when a particular course was first created, not when it was last updated.
