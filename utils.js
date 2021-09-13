@@ -4,21 +4,38 @@ const cheerio = require('cheerio')
 module.exports = {
   async getCourseCreationDate(id) {
     try {
-      const { data } = await axios.get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=created`)
+      const { data } = await axios
+        .get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=created`)
       return data.created
     } catch (err) {
       console.log(err)
     }
   },
-  async getCourseId(courseURL) {
+  async getCourseId(parsedCourseURL) {
     try {
-      const response = await axios.get(courseURL)
+      const response = await axios.get(parsedCourseURL)
       return cheerio.load(response.data)('body').attr()['data-clp-course-id']
     } catch (err) {
       console.log(err)
     }
   },
-  // splitURLForAlreadyPurchasedCourse(courseURL) {
-  
-  // }
+  async parseURL(courseURL) {
+    const urlArray = courseURL.split('/').filter(el => el !== '')
+    
+    if (urlArray.length === 4) {
+      return courseURL
+    } 
+
+    let parsedURLString = ''
+    for (let i = 0; i <= 3; i++) {
+      let el = urlArray[i]
+
+      if (el === 'https:') {
+        parsedURLString += `${el}//`
+      } else {
+        parsedURLString += `${el}/`
+      }
+    }
+    return parsedURLString
+  }
 }
