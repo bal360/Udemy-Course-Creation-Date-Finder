@@ -2,11 +2,10 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 
 module.exports = {
-  async getCourseCreationDate(id) {
+  async getCourse(id) {
     try {
-      const { data } = await axios
-        .get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=created`)
-      return data.created
+      const { data } = await axios.get(`https://www.udemy.com/api-2.0/courses/${id}/?fields[course]=created,title`)
+      return data
     } catch (err) {
       console.log(err)
     }
@@ -29,7 +28,6 @@ module.exports = {
     let parsedURLString = ''
     for (let i = 0; i <= 3; i++) {
       let el = urlArray[i]
-
       if (el === 'https:') {
         parsedURLString += `${el}//`
       } else {

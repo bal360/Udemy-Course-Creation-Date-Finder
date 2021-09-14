@@ -1,7 +1,7 @@
 const http = require('http')
 const { parse } = require('qs')
 
-const { getCourseId, getCourseCreationDate } = require('./utils')
+const { getCourseId, getCourse, parseURL } = require('./utils')
 const layout = require('./layout')
 
 
@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000
 http.createServer(async (req, res) => {
   
   let body = ''
-  let created =  ''
   if (req.method === 'POST') {
 
     req.on('data', function (chunk) {
@@ -20,18 +19,19 @@ http.createServer(async (req, res) => {
       const parsedReq = parse(body)
       const courseURL = parsedReq.courseURL
       
-      if (!courseURL.trim().length > 0 || !courseURL.trim().includes('/course/')) {
-        res.end(layout({created}))
+      if (!courseURL.trim().length > 0 || !courseURL.trim().includes('.com')) {
+        res.end(layout({}))
       } else {
-        const courseId = await getCourseId(courseURL)
-        const creationDate = await getCourseCreationDate(courseId)
-        created = new Date(creationDate).toDateString()
+        const parsedCourseURL = await parseURL(courseURL)
+        const courseId = await getCourseId(parsedCourseURL)
+        const {created, title} = await getCourse(courseId)
+        const creationDate = new Date(created).toDateString()
         
         res.writeHead(200);
-        res.end(layout({created}));
+        res.end(layout({creationDate, title}));
       }
     })
   } else {
-    res.end(layout({created}))
+    res.end(layout({}))
   }
 }).listen(port)

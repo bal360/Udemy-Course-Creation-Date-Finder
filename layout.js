@@ -1,4 +1,4 @@
-module.exports = ({created}) => {
+module.exports = ({creationDate = '' , title = ''}) => {
   return `
     <!DOCTYPE html>
     <html lang="en">
@@ -13,7 +13,7 @@ module.exports = ({created}) => {
       <body style="display:flex; min-height:100vh; flex-direction:column;">
         <header>
           <div class="row">
-            <h3 class="center-align blue-grey-text lighten-4">Udemy Course Creation Date Finder</h3>
+            <h1 class="center-align blue-grey-text lighten-4">Udemy Course Creation Date Finder</h1>
           </div>
         </header>
         <main style="flex: 1 0 auto;">
@@ -29,7 +29,8 @@ module.exports = ({created}) => {
               </form>
             </div>
             <div class="row center-align">
-              <h3 class="light-blue-text">${created}</h3>
+              <h3 class="light-blue-text">${title}</h3>
+              <h2 class="light-blue-text">${creationDate}</h2>
             </div>
           </div>
         </main>
