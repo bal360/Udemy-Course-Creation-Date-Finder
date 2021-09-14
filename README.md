@@ -5,8 +5,8 @@ can quickly tell you when a particular course was first created, not when it was
 
 Some updates and refactoring to this ugly code are definitely needed, but it works as is for now. So enjoy!
 
-Please watch this short video to learn the current steps you need to know to use this app:
+Please watch this short video to learn how to use this app:
 
 [Instructional Video](https://user-images.githubusercontent.com/46230902/133181478-ba92ec64-091b-409d-a65c-046ed30dafcd.mp4)
 
-## Now go and use the app [here!](https://obscure-bayou-33734.herokuapp.com/)
+## Now go and use the [app here!](https://obscure-bayou-33734.herokuapp.com/)
