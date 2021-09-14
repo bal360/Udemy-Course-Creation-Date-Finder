@@ -1,7 +1,7 @@
 const http = require('http')
 const { parse } = require('qs')
 
-const { getCourseId, getCourse, parseURL } = require('./utils')
+const { scrapeCourseId, getCourse, parseURL } = require('./utils')
 const layout = require('./layout')
 
 
@@ -23,7 +23,7 @@ http.createServer(async (req, res) => {
         res.end(layout({}))
       } else {
         const parsedCourseURL = await parseURL(courseURL)
-        const courseId = await getCourseId(parsedCourseURL)
+        const courseId = await scrapeCourseId(parsedCourseURL)
         const {created, title} = await getCourse(courseId)
         const creationDate = new Date(created).toDateString()
         

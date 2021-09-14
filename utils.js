@@ -10,7 +10,7 @@ module.exports = {
       console.log(err)
     }
   },
-  async getCourseId(parsedCourseURL) {
+  async scrapeCourseId(parsedCourseURL) {
     try {
       const response = await axios.get(parsedCourseURL)
       return cheerio.load(response.data)('body').attr()['data-clp-course-id']
