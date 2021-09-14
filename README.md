@@ -7,6 +7,6 @@ Some updates and refactoring to this ugly code are definitely needed, but it wor
 
 Please watch this short video to learn the current steps you need to know to use this app:
 
-[Instructional Video](https://user-images.githubusercontent.com/46230902/132792037-d1cf1650-feea-42c3-aa6d-0feb3c95a876.mp4)
+[Instructional Video](https://user-images.githubusercontent.com/46230902/133181478-ba92ec64-091b-409d-a65c-046ed30dafcd.mp4)
 
 ## Now go and use the app [here!](https://obscure-bayou-33734.herokuapp.com/)
