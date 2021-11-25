@@ -4,8 +4,7 @@
   "description": "find the creation date of any udemy course",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Blake Long",

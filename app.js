@@ -11,11 +11,11 @@ http.createServer(async (req, res) => {
   let body = ''
   if (req.method === 'POST') {
 
-    req.on('data', function (chunk) {
+    req.on('data', function(chunk) {
       body += chunk;
     })
 
-    req.on('end', async () => {
+    req.on('end', async function() {
       const parsedReq = parse(body)
       const courseURL = parsedReq.courseURL
       
