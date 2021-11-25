@@ -37,7 +37,7 @@ module.exports = ({creationDate = '' , title = ''}) => {
         <footer class="page-footer blue-grey lighten-4">
           <div class="container">
             <div class="row center-align">
-              blakeallanlong.dev
+              <a href="https://www.blakeallanlong.dev" target="_blank" style="color: inherit;">blakeallanlong.dev</a>
             </div>
           </div>
         </footer>
